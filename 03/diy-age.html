@@ -8,7 +8,16 @@
 	<link rel="stylesheet" href="css/age.css">
 </head>
 <body>	
-	<button class="btn" onclick="calc()">나이 계산하기</button>
 	<div id="result" class="show">(결과 값 표시)</div> 
+	<button class="btn" onclick="calc()">나이 계산하기</button>
+	<script>
+		function calc() {
+			var birth, year, age;
+			year = 2022;
+			birth = prompt("태어난 연도");
+			age = year - birth + 1;
+			document.querySelector("#result").innerHTML = `태어난 연도=${birth}, 올해 연도=${year}, 나이=${age}`;
+		}
+	</script>
 </body>
 </html>

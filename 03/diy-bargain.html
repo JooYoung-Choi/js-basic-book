@@ -24,6 +24,17 @@
 			</li>
 		</ul>
 		<div id="showResult"></div>	
+		<script>
+			function showPrice() {
+				var originPrice = document.querySelector("#oPrice").value;
+				var rate        = document.querySelector("#rate").value;
+				if( originPrice>0 && rate>0 ) {
+					var savePrice = originPrice * rate / 100;
+					var resultPrice = originPrice - savePrice;
+					document.querySelector("#showResult").innerHTML = `원래 가격=${originPrice}, 할인율=${rate}, 할인된 가격=${savePrice}, 최종가격=${resultPrice}`;
+				}
+			}
+		</script>
 	</div>	
 </body>
 </html>
